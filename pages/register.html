@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../style/register.css">
+    <link rel="stylesheet" href="../style/keyframes.css">
+</head>
+<body>
+    <nav>
+        <i class="logo">Web Notes</i>
+        <i class='bx bx-menu'></i>
+        <ul>
+            <li><a href="./about.html">Sobre</a>
+            <li><a href="./contact.html">Contato</a></li>
+            <li><a href="./login.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="textAnimation">
+        <h1 id="textH1" class="textDigite">Seja bem vindo(a) ao Web Notes</h1>
+        <p id="textP1">Aqui você poderá organizar suas anotações, desde</p>
+        <p id="textP2">textos, links, metas, códigos e etc.</p>
+    </div>
+    <div class="alert">
+        <i class='bx bx-error'></i>
+        <div id="aviso">
+            <h1>Aviso importante!</h1>
+            <p>Nunca guarde anotações importantes online. Anotações como, senhas de email, senhas de bancos, dados pessoais (CPF, RG, e outros).</p>
+        </div>
+    </div>
+    <div id="register">
+        <h2>Cadastro</h2>
+        <form action="/register" method="post">
+            <div class="input-field">
+                <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
+                <div class="underline">
+
+                </div>
+            </div>
+            <div class="input-field" style="margin-bottom: 1.5rem">
+                <input type="text" name="usuario" id="usuario" placeholder="Seu nome de usuário" required>
+                <div class="underline">
+
+                </div>
+            </div>
+            <div class="input-field" style="margin-bottom: 1.5rem">
+                <input type="email" name="email" id="email" placeholder="Seu email" required>
+                <div class="underline">
+
+                </div>
+            </div>
+            <div class="input-field" style="margin-bottom: 1.5rem">
+                <input type="password" name="senha" id="password" placeholder="Sua senha" required>
+                <i class='bx bx-show' id="olho"></i>
+                <div class="underline">
+
+                </div>
+            </div>
+            <div class="input-field" style="margin-bottom: 1.5rem">
+                <input type="password" name="confirmarSenha" id="confirmarSenha" placeholder="Confirmar senha" required>
+                <div class="underline">
+
+                </div>
+            </div>
+            <input type="submit" value="Continue">
+        </form>
+        <footer>
+            <span id="mediasocial">Ja está cadastrado? <a href="./login.html" class="linkPagLogin">faça Login</a></span>
+            <div class="social-field">
+                <a href="#google">
+                    <div class="social-field google">
+                        <img src="https://img.icons8.com/fluency/48/000000/google-logo.png"/>
+                        Entrar com o Google
+                    </div>
+                </a>
+                <a href="#facebook">
+                    <div class="social-field facebook">
+                        <i class='bx bxl-facebook'></i>
+                        Entrar com o Facebook
+                    </div>
+                </a>
+            </div>
+            <script src="../js/register.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        </footer>
+    </div>
+</body>
+</html>

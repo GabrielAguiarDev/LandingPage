@@ -1,0 +1,501 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #13ccadf6, #013633f8);
+    background-image: url("../img/background_green-pequeno.webp");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.logo {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #14b4a2;
+    display: inline-block;
+    width: 265px;
+    margin: 20px 0px 0px 35px;
+}
+
+nav {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+nav .bx-menu {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    margin: 20px 42px;
+    transition: all .3s ease;
+}
+
+nav ul li {
+    margin-right: 45px;
+    list-style: none;
+}
+
+nav ul li.active {
+    border-bottom: 3px solid #0ecfb9;
+    border-radius: 2px;
+}
+
+nav ul li.active a {
+    color: #1fcfbb;
+}
+
+nav ul li a {
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Poppins';
+    color: #13a392;
+    transition: all .2s ease;
+}
+
+nav ul li a:hover {
+    border-bottom: 3px solid #14b4a13b;
+    color: #1fcfbb;
+}
+
+#login {
+    position: relative;
+    top: 45px;
+    background: white;
+    min-width: 335px;
+    max-width: 350px;
+    min-height: 46vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+#login h2 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+#login h2::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #13ccadf6, #167464f8); 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login .input-field {
+    position: relative;
+}
+
+#login .input-field:first-child {
+    margin-bottom: 1.5rem;
+}
+
+#login .input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#login .input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #13ccadf6, #167464f8);
+    transform: scale(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+#login .input-field input:focus ~ .underline::after {
+    transform: scale(1);
+}
+
+#login .input-field input {
+    width: 245px;
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7)
+}
+
+#login .input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#login form input[type="submit"] {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background: linear-gradient(to left, #13ccadf6, #167464f8);
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+#login form input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to left, #13ccadf6, #167464f8 90%);
+}
+
+#login .footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+#login #mediasocial {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+#login .social-field a {
+    font-size: 0.85rem;
+    width: 100px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    
+}
+
+#login .social-field.google {
+    color: black;
+}
+
+#login .social-field a .google img {
+    position: relative;
+    top: 4px;
+    margin: 0px 2px 0px 3px;
+    width: 20px;
+}
+
+#login .social-field.google {
+    background-color: #f3f3f3;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.199);
+    border-radius: 4px;
+    padding: 3px;
+    margin-top: 1rem;
+    transition: 0.3s all ease;
+}
+
+#login .social-field.google:hover {
+    background-color: #e9e8e8;
+}
+
+#login .social-field.facebook {
+    background-color: #224483;
+    border-radius: 4px;
+    padding: 6px;
+    margin-top: 6px;
+    transition: 0.3s all ease;
+}
+
+#login .social-field.facebook:hover {
+    background-color: #2b539e;
+}
+
+#login .social-field a .facebook i {
+    margin: 0px 6px;
+    width: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+}
+
+#login span > a:hover {
+    text-decoration: underline;
+}
+
+#login #olho {
+    position: absolute;
+    right: 12px;
+    top: 1px;
+    font-size: 22px;
+    color: #a09f9fa9;
+    cursor: pointer;
+}
+
+#login .hrColor {
+    height: 1px;
+    background-color: #13ccadf6;
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+#login .redefinir {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #13ccadf6;
+}
+
+#login .redefinir:hover {
+    text-decoration: underline;
+}
+
+#login #btnCadastro {
+    margin: 0 auto;
+    width: 147px;
+    padding: 5px;
+    background-color: #13ccadf6;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: 2px 3px 3px #00000024;
+    transition: 0.3s all ease;
+    cursor: pointer;
+}
+
+#login #btnCadastro:hover {
+    background-color: #0cc0a2f6;
+}
+
+.figure {
+    position: relative;
+    top: 30px;
+    width: 550px;
+    margin-right: 235px;
+}
+
+.figureLandingPage {
+    width: 550px;
+}
+
+.figure .icon1 {
+    position: absolute;
+    right: 71px;
+    top: 70px;
+    transition: all 0.2s ease;
+    animation: move_icon 3s ease-in-out infinite alternate;
+}
+
+.figure .icon1 img {
+    width: 50px;
+}
+
+.figure .icon2 {
+    position: absolute;
+    left: 230px;
+    top: 20px;
+    width: 50px;
+    transition: all 0.2s ease;
+    animation: move_icon 4.8s ease-in-out infinite alternate;
+}
+
+.figure .icon2 img {
+    width: 65px;
+}
+
+.figure .icon3 {
+    position: absolute;
+    left: 43px;
+    bottom: 60px;
+    width: 50px;
+    transition: all 0.2s ease;
+    animation: move_icon 5s ease-in-out infinite alternate;
+}
+
+.figure .icon3 img {
+    width: 60px;
+}
+
+.figure .icon4 {
+    position: absolute;
+    right: 55px;
+    bottom: 70px;
+    width: 50px;
+    transition: all 0.2s ease;
+    animation: move_icon 5.5s ease-in-out infinite alternate;
+}
+
+.figure .icon4 img {
+    width: 50px;
+}
+
+.figure .icon5 {
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    width: 50px;
+    transition: all 0.2s ease;
+    animation: move_icon 4s ease-in-out infinite alternate;
+}
+
+.figure .icon5 img {
+    width: 60px;
+}
+
+/* Responsivo */
+
+@media only screen and (max-width: 1150px) {
+    .figure {
+        margin-right: 40px;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    body {
+        flex-direction: column;
+    }
+
+    body::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background-color: #167464f8;
+        border-radius: 18px;  
+    }
+    
+    body::-webkit-scrollbar-track {
+        background-color: rgb(216, 216, 216);
+    }
+
+    .figure {
+        top: 100px;
+        margin-bottom: 89px;
+        margin-right: 17px;
+    }
+
+    #login {
+        top: 0;
+        margin-top: 45px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-repeat: repeat;
+    }
+
+    nav .bx-menu {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        display: block;
+        font-size: 36px;
+        padding: 6px;
+        color: #167464f8;
+        cursor: pointer;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 44px;
+        right: -200px;
+        flex-direction: column-reverse;
+        padding: 8px;
+        border-radius: 8px 0px 8px 0px;
+        background-color: #167464f8;
+        height: auto;
+        width: 144px;
+        opacity: 0;
+    }
+
+    nav ul.active {
+        right: -10px;
+        opacity: 1;
+    }
+
+    nav ul li {
+        margin-right: 0px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 393px) {
+    .logo {
+        margin: 20px 0px 0px 57px;
+    }
+
+    nav .bx-menu {
+        top: 13px;
+        right: 49px;
+        display: block;
+        font-size: 40px;
+    }
+
+    nav ul.active {
+        right: 0px;
+        opacity: 1;
+    }
+
+    .figure {
+        display: flex;
+        justify-content: center;
+    }
+
+    .figure .icon1 {
+        right: 123px;
+        top: 42px;
+    }
+    .figure .icon2 {
+        top: 0px;
+    }
+    .figure .icon3 {
+        left: 96px;
+        bottom: 40px;
+    }
+    .figure .icon4 {
+        right: 100px;
+        bottom: 30px;
+    }
+    .figure .icon5 {
+        top: 25px;
+    }
+
+    .figureLandingPage {
+        width: 400px;
+    }
+
+    #login {
+        min-width: 365px;
+    }
+}

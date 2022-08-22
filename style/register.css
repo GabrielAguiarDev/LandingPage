@@ -1,0 +1,529 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #13ccadf6, #013633f8);
+    background-image: url("../img/background_green-pequeno.webp");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.logo {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #14b4a2;
+    display: inline-block;
+    width: 265px;
+    margin: 20px 0px 0px 35px;
+}
+
+nav {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+nav .bx-menu {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    margin: 20px 42px;
+    transition: all .3s ease;
+}
+
+nav ul li {
+    margin-right: 45px;
+    list-style: none;
+}
+
+nav ul li.active {
+    border-bottom: 3px solid #0ecfb9;
+    border-radius: 2px;
+}
+
+nav ul li.active a {
+    color: #1fcfbb;
+}
+
+nav ul li a {
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Poppins';
+    color: #13a392;
+    transition: all .2s ease;
+}
+
+nav ul li a:hover {
+    border-bottom: 3px solid #14b4a13b;
+    color: #1fcfbb;
+}
+
+#register {
+    position: relative;
+    top: 39px;
+    left: 40px;
+    background: white;
+    max-width: 350px;
+    min-width: 335px;
+    min-height: 46vh;
+    padding: 21px;
+    box-shadow: 5px 5px 15px rgb(0 0 0 / 20%);
+    border-radius: 8px;
+}
+
+#register h2 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+#register h2::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 35px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #13ccadf6, #167464f8); 
+}
+
+#register .input-field {
+    position: relative;
+}
+
+#register .input-field:first-child {
+    margin-bottom: 1.5rem;
+}
+
+#register .input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#register .input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #13ccadf6, #167464f8);
+    transform: scale(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+#register .input-field input:focus ~ .underline::after {
+    transform: scale(1);
+}
+
+#register .input-field input {
+    width: 285px;
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7)
+}
+
+#register .input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#register form input[type="submit"] {
+    width: 100%;
+    margin-top: 0.2rem;
+    padding: 0.8rem;
+    background: linear-gradient(to left, #13ccadf6, #167464f8);
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+#register form input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to left, #13ccadf6, #167464f8 90%);
+}
+
+#register .footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+#mediasocial {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+#register .social-field a {
+    font-size: 0.85rem;
+    width: 100px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    
+}
+
+#register .social-field.google {
+    color: black;
+}
+
+#register .social-field a .google img {
+    position: relative;
+    top: 4px;
+    margin: 0px 2px 0px 3px;
+    width: 20px;
+}
+
+#register .social-field.google {
+    background-color: #f3f3f3;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.199);
+    border-radius: 4px;
+    padding: 3px;
+    margin-top: 1rem;
+    transition: 0.3s all ease;
+}
+
+#register .social-field.google:hover {
+    background-color: #e9e8e8;
+}
+
+#register .social-field.facebook {
+    background-color: #224483;
+    border-radius: 4px;
+    padding: 6px;
+    margin-top: 6px;
+    transition: 0.3s all ease;
+}
+
+#register .social-field.facebook:hover {
+    background-color: #2b539e;
+}
+
+#register .social-field a .facebook i {
+    position: relative;
+    top: 2px;
+    margin: 0px 3px;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+}
+
+#register span > a:hover {
+    text-decoration: underline;
+}
+
+#register #olho {
+    position: absolute;
+    right: 12px;
+    top: 1px;
+    font-size: 22px;
+    color: #a09f9fa9;
+    cursor: pointer;
+}
+
+#register .linkPagLogin {
+    color: #13ccadf6;
+}
+
+#register .linkPagLogin:hover {
+    text-decoration: underline;
+}
+
+.textAnimation {
+    position: relative;
+    top: 0px;
+    width: 534px;
+    margin-right: 158px;
+}
+
+.textDigite {
+    border-right: 3px solid;
+    animation: cursor .7s steps(40) infinite normal, digite 3.5s steps(40) normal;
+}
+
+@keyframes cursor {
+    from {
+        border-right-color: #097c69;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes digite {
+    from {
+        width: 0;
+        visibility: hidden;
+    }
+    to {
+        width: 500px;
+    }
+}
+
+.textAnimation h1 {
+    width: 500px;
+    font-size: 29px;
+    color: #097c69;
+    margin-bottom: 16px;
+    height: 41px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.textAnimation p {
+    width: 500px;
+    font-size: 19px;
+    color: #00dcc4;
+    font-weight: 700;
+    margin-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.alert {
+    position: absolute;
+    left: 53px;
+    bottom: 33px;
+    min-height: 73px;
+    width: 800px;
+    z-index: 1;
+}
+
+.alert i {
+    position: absolute;
+    top: 14px;
+    left: -8px;
+    font-size: 40px;
+    padding: 2px 3px 4px 4px;
+    border-radius: 50%;
+    background-color: #15f9c8;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.alert i.alertIcon {
+    animation: alertIcon .8s ease-in-out infinite alternate;
+}
+
+.alert i:hover {
+    animation: none;
+}
+
+.alert i:hover + #aviso {
+    left: 47px;
+    opacity: 1;
+}
+
+.alert #aviso {
+    position: relative;
+    left: 47px;
+    width: 752px;
+    background-color: white;
+    color: #15f9c8;
+    border: 1px solid #00dcc4;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all .5s ease;
+}
+
+.alert #aviso.hidden {
+    opacity: 0;
+    left: 40px;
+}
+
+.alert #aviso h1 {
+    font-size: 15px;
+}
+
+.alert #aviso p {
+    color: #02583d;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Responsivo */
+
+@media only screen and (max-width: 1150px) {
+    .textAnimation {
+        margin-right: 80px;
+    }
+}
+
+@media only screen and (max-width: 1090px) {
+    .textAnimation {
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .textAnimation {
+        margin-right: 5px;
+    }
+
+    #register {
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    body {
+        flex-direction: column;
+    }
+
+    body::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background-color: #167464f8;
+        border-radius: 18px;  
+    }
+    
+    body::-webkit-scrollbar-track {
+        background-color: rgb(216, 216, 216);
+    }
+
+    .textAnimation {
+        top: 100px;
+        margin-bottom: 89px;
+        margin-right: 17px;
+    }
+
+    .alert {
+        left: 27px;
+        bottom: 4px;
+    }
+
+    .alert #aviso {
+        width: 400px;
+    }
+
+    .alert #aviso p {
+        width: 386px;
+    }
+
+    #register {
+        margin-top: 100px;
+        margin-bottom: 20px;
+        top: 0;
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 595px) {
+    nav .logo {
+        font-size: 24px;
+    }
+
+    nav ul {
+        margin: 20px 10px;
+    }
+
+    .textAnimation {
+        margin-right: 0;
+        left: 45px;
+        top: 127px;
+    }
+    .textAnimation h1 {
+        font-size: 25px;
+    }
+    .textAnimation p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    nav .bx-menu {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        display: block;
+        font-size: 36px;
+        padding: 6px;
+        color: #167464f8;
+        cursor: pointer;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 44px;
+        right: -200px;
+        flex-direction: column-reverse;
+        padding: 8px;
+        border-radius: 8px 0px 8px 0px;
+        background-color: #167464f8;
+        height: auto;
+        width: 144px;
+        opacity: 0;
+    }
+
+    nav ul.active {
+        right: -10px;
+        opacity: 1;
+    }
+
+    nav ul li {
+        margin-right: 0px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        color: white;
+    }
+
+    .textAnimation {
+        top: 123px;
+        left: 0;
+        margin-right: 0;
+        width: 432px;
+    }
+
+    .textAnimation h1 {
+        font-size: 23px;
+    }
+
+    .textAnimation p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 393px) {
+    
+}

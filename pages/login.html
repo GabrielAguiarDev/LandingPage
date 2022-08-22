@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../style/login.css">
+    <link rel="stylesheet" href="../style/keyframes.css">
+</head>
+
+<body>
+    <nav>
+        <i class="logo">Web Notes</i>
+        <i class='bx bx-menu'></i>
+        <ul>
+            <li><a href="./about.html">Sobre</a>
+            <li><a href="./contact.html">Contato</a></li>
+            <li class="active"><a href="./login.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="figure">
+        <div class="icon1">
+            <img class="imgIcon" src="../img/code.png" alt="icon_code">
+        </div>
+        <div class="icon2">
+            <img class="imgIcon" src="../img/note.png" alt="icon_note">
+        </div>
+        <div class="icon3">
+            <img class="imgIcon" src="../img/reminder.png" alt="icon_reminder">
+        </div>
+        <div class="icon4">
+            <img class="imgIcon" src="../img/text.png" alt="icon_text">
+        </div>
+        <div class="icon5">
+            <img class="imgIcon" src="../img/cloud_link.png" alt="icon_cloud_link">
+        </div>
+        <img class="figureLandingPage" src="../img/figure_landing_page.png" alt="figure_landing_page">
+    </div>
+    <div id="login">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+
+            <div class="input-field">
+                <input type="text" name="user" id="username" placeholder="Entre com seu usuário" required>
+                <div class="underline">
+
+                </div>
+            </div>
+            <div class="input-field">
+                <input type="password" name="senha" id="password" placeholder="Entre com sua senha" required>
+                <i class='bx bx-show' id="olho"></i>
+                <div class="underline"></div>
+            </div>
+            <input type="submit" value="Continue">
+        </form>
+        <div class="footer">
+            <a href="#RecuperarSenha"><span class="redefinir">Esqueceu a senha?</span></a>
+            <div class="social-field">
+                <a href="#google">
+                    <div class="social-field google">
+                        <img src="https://img.icons8.com/fluency/48/000000/google-logo.png" />
+                        Entrar com o Google
+                    </div>
+                </a>
+                <a href="#facebook">
+                    <div class="social-field facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Entrar com o Facebook
+                    </div>
+                </a>
+            </div>
+            <div class="hrColor"></div>
+            <a href="./register.html" id="btnCadastro">Criar nova conta</a>
+        </div>
+    </div>
+    <footer>
+        <script src="../js/login.js"></script>
+    </footer>
+</body>
+
+</html>
