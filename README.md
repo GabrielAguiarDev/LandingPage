@@ -19,23 +19,15 @@ Visual Studio Code (or any text editor);
 
 ## ⚙️ Installation and Setup Instructions
 
-Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
+Clone down this repository.
 
 Installation:
 
-`npm install`  
-
-To Run Test Suite:  
-
-`npm test`  
+git clone https://github.com/GabrielAguiarDev/LandingPage
 
 To Start Server:
 
-`npm start`  
-
-To Visit App:
-
-`localhost:3000/`
+use o Live server
 
 ---
 Made with ❤️ by [Gabriel](https://github.com/GabrielAguiarDev) 👀
