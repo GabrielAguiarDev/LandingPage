@@ -7,10 +7,7 @@ Responsive landing page with login, registration, about, and contacts
 * HTML5
 * CSS3
 * Javascript
-* React
-* Hooks
-* Props
-* JSX
+* JQUERY
 
 ### 📋 Prerequisites
 
